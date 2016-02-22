@@ -1,0 +1,100 @@
+<div class="content pure-u-1">         
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <div class="pure-g">
+                <!-- <input type="text" placeholder="Ваш идентификатор" class="pure-input-1" id="operatorId"> -->
+                <select class="pure-input-1" id="operatorList">
+                    <option value="null">Выберите оператора</option>
+                </select>
+                <select class="pure-input-1" id="siteList">
+                    <option value="null">Выберите Сайт</option>
+                </select>
+                <input type="text" placeholder="Имя клиента" class="pure-input-1" id="clientName">
+                <div class="pure-u-1-2">
+                    <select class="pure-input-1" id="cityList">
+                        <option value="other">Другой город</option>
+                    </select>
+                </div>
+                <div class="pure-u-1-2">
+                    <input type="text" placeholder="Город" id="otherCity" hidden>
+                </div>
+                <div class="pure-u-1-2">
+                    <a class="pure-button full-button" href="#" id="oldOrder"><i class="fa fa-pencil"></i> существующий заказ</a>
+                </div>
+                <div class="pure-u-1-2">
+                    <a class="pure-button full-button" href="#" id="newOrder"><i class="fa fa-plus"></i> новый заказ</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="content pure-u-1 forms">  
+    <form class="pure-form pure-form-stacked" id="newOrderForm" hidden>
+        <fieldset>
+            <legend>Доставка</legend>
+            <div class="pure-g">
+                <div class="pure-u-1">
+                    <input type="text" placeholder="Контактный номер телефона" id="phoneNumber">
+                </div>
+                <div class="pure-u-1-2">
+                    <input type="text" id="datepicker" disabled id="orderDate">
+                </div>
+                <div class="pure-u-1-2">
+                    <a class="pure-button full-button" id="datepicker-button" href="#"><i class="fa fa-calendar"></i> Дата доставки</a>
+                </div>
+                <div class="pure-u-1">
+                    <input type="text" placeholder="Время доставки" id="orderTime">
+                </div>
+                <div class="pure-u-1">
+                    <input type="text" placeholder="Адрес доставки" id="orderAddress">
+                </div>
+                <div class="pure-u-1" id="paymentNotice">
+                </div>
+                <div class="pure-u-1">
+                    <input type="text" placeholder="Стоимость доставки" id="shippingCost">
+                </div>
+                <div class="pure-u-1">
+                    <textarea placeholder="Комментарий для Логиста" rows="5" class="pure-input-1" id="logistComment"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <form class="pure-form pure-form-stacked" id="productForm" hidden>
+        <fieldset>
+            <legend>Товары</legend>
+            <div class="pure-g">
+                <div class="pure-u-2-3">
+                    <input id="product-name" type="text" placeholder="Товар" required>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-5">
+                    <input id="product-price" type="text" placeholder="Цена" required>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-8">
+                    <button class="addProd pure-button"><i class="fa fa-plus"></i></button>
+                </div>
+                <div class="pure-u-1">
+                    <table class="prod-list pure-table pure-table-bordered">
+                        <tr class="example" hidden>
+                            <td class="prod"></td> 
+                            <td class="prod-price"></td>                         
+                            <td class="prod-del-line">
+                                <a class="pure-button delProd" href="#"><i class="fa fa-minus"></i></a>
+                            </td>                                    
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+        <legend>Итоговая сумма</legend>
+        <div class="pure-g">
+            <div class="pure-u-1 summary">
+            </div>
+            <div class="pure-u-1-2">
+                <a class="pure-button button-error full-button" href="#" id="reject"><i class="fa fa-times"></i> Отказ</a>
+            </div>
+            <div class="pure-u-1-2">
+                <a class="pure-button button-success full-button" href="#" id="sendNewOrder"><i class="fa fa-check"></i> Отправить</a>
+            </div>
+        </div>        
+    </form>
+</div>
